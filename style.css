@@ -25,6 +25,7 @@
     /* Size */
     --size-border-radius: 4px;
 }
+
 /* Universal tags */
 * {
     box-sizing: border-box;
@@ -98,3 +99,22 @@ li {
 .navbar_menu_item:hover{
     background-color: var(--color-dark-blue);
 }
+
+/* Home */
+#home {
+    background: url('image/home-background2.png') center/cover no-repeat ;  
+    padding: 40px;
+    text-align: center;
+}
+.home_avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+}
+
+.home_title,.home_description{
+    color: var(--color-deep_yellow);
+
+}
+/* Section common */
