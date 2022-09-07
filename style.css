@@ -23,10 +23,19 @@
     --weight-semi-bold:600;
     --weight-reaular: 400;
     /* Size */
+    --size-border-radius: 4px;
 }
 /* Universal tags */
 * {
     box-sizing: border-box;
+}
+body {
+    margin: 0;
+    cursor: default;
+}
+a {
+    text-decoration: none;
+    color: var(--color-white);
 }
 /* Typography */
 h1 {
@@ -43,7 +52,7 @@ h2 {
 }
 h3 {
     font-size: var(--font-reqular);
-    font-weight: var(--weight-reaular);
+    font-weight: var(--font-reqular);
     color: var(--color-black);
     margin: 8px 0;
 }
@@ -52,4 +61,40 @@ p {
     font-weight: var(--font-reqular);
     color: var(--color-black);
     margin: 4px 0;
+}
+
+/* Navbar */
+li {
+    list-style: none;
+}
+#navbar {
+    display: flex; /*flex box "복잡한 계산 없이 요소의 크기와 순서를 유연하게 배치할 수 있다"*/
+    justify-content: space-between; /* 중심축 정렬 */
+    background-color: var(--color-blue);
+    align-items: center;
+    color: var(--color-white);
+}
+.img_1{
+    filter:invert(100%);
+}
+.navbar_menu{
+    display: flex;
+}
+.navbar_logo{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+.navbar_menu_item{
+    padding: 8px 12px;
+    margin: 03px;
+    cursor: pointer;
+    border-radius: var(--size-border-radius);
+}
+
+.navbar_menu_item.active{
+    border: 1px solid var(--color-white);
+    
+}
+.navbar_menu_item:hover{
+    background-color: var(--color-dark-blue);
 }
