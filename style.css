@@ -9,7 +9,7 @@
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-frey: #7c7979;
-    --color-yellow: #fff7d1;
+    --color-yellow: #ffe4b5;
     --color-deep_yellow: #FFF156;
     --color-black: #000000;
     /*Font size  */
@@ -24,6 +24,8 @@
     --weight-reaular: 400;
     /* Size */
     --size-border-radius: 4px;
+    /* Animation Duriation */
+    --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -76,7 +78,8 @@ li {
     color: var(--color-white);
 }
 .img_1{
-    filter:invert(100%);
+    color: var(--color-white);
+    padding: 8px 12px;
 }
 .navbar_menu{
     display: flex;
@@ -84,20 +87,29 @@ li {
 .navbar_logo{
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
+    color: white;
 }
 .navbar_menu_item{
     padding: 8px 12px;
-    margin: 03px;
+    margin: 0 3px;
     cursor: pointer;
     border-radius: var(--size-border-radius);
 }
 
 .navbar_menu_item.active{
-    border: 1px solid var(--color-white);
-    
+    border: 1px solid var(--color-white);    
 }
 .navbar_menu_item:hover{
     background-color: var(--color-dark-blue);
+}
+
+.navbar__toggle-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
 }
 
 /* Home */
@@ -106,15 +118,75 @@ li {
     padding: 40px;
     text-align: center;
 }
+
 .home_avatar {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-light-white);
 }
 
-.home_title,.home_description{
-    color: var(--color-deep_yellow);
 
+.home_title,
+.home_description {
+    color: var(--color-white);
 }
 /* Section common */
+
+.section {
+    padding :50px;
+    text-align: center;
+    max-width: 1200px; /*1000~1200 컴퓨터 화면 편안*/
+    margin: auto;
+}
+
+/* About */
+.about_majors {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px 0;
+}
+
+.major_icon {
+    width: 200px;
+    height: 200px;
+    line-height: 200px; /*width와 height과 동일하게 설정하면 가운데로 온다.*/
+    font-size: 70px;
+    margin: auto;
+    border: 1px solid var(--color-dark-blue);
+    color: var(--color-blue);
+    border-radius: 50%;
+    margin-bottom:16px;
+
+}
+
+.major_icon i{
+    transition: all var(--animation-duration) ease;
+}
+.major_icon:hover i{
+    color: var(--color-yellow);
+    transform: scale(1.2);
+}
+.major_title,
+.major_description{
+    color: var(--color-dark-grey);
+}
+
+.major_description{
+    font-size: var(--font-small);
+}
+
+.job{
+    display: flex;
+    align-items: center;
+}
+
+.job_name,
+.job_period{
+    color: var(--color-light-frey);
+}
+
+.job_description{
+    margin: 0 16px;
+    text-align: left;
+}
