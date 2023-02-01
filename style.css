@@ -183,7 +183,7 @@ li {
 
 .job_name,
 .job_period{
-    color: var(--color-light-frey);
+    color: var(--color-light-grey);
 }
 
 .job_description{
