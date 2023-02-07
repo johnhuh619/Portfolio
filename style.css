@@ -41,6 +41,15 @@ a {
     text-decoration: none;
     color: var(--color-white);
 }
+li {
+    list-style: none;
+}
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
 /* Typography */
 h1 {
     font-size: var(--font-large);
@@ -66,50 +75,52 @@ p {
     color: var(--color-black);
     margin: 4px 0;
 }
-
 /* Navbar */
-li {
-    list-style: none;
-}
 #navbar {
     display: flex; /*flex box "복잡한 계산 없이 요소의 크기와 순서를 유연하게 배치할 수 있다"*/
     justify-content: space-between; /* 중심축 정렬 */
     background-color: var(--color-blue);
     align-items: center;
-    color: var(--color-white);
+    padding:16px;
 }
-.img_1{
-    color: var(--color-white);
-    padding: 8px 12px;
-}
-.navbar_menu{
-    display: flex;
-}
-.navbar_logo{
+
+.navbar_logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: white;
 }
+
+.img_1{
+    color: var(--color-white);
+    padding: 8px 12px;
+}
+
+.navbar_menu{
+    display: flex;
+}
+
 .navbar_menu_item{
     padding: 8px 12px;
     margin: 0 3px;
+    color: white;
     cursor: pointer;
-    border-radius: var(--size-border-radius);
 }
 
 .navbar_menu_item.active{
     border: 1px solid var(--color-white);    
+    border-radius: var(--size-border-radius);
 }
 .navbar_menu_item:hover{
     background-color: var(--color-dark-blue);
+    border-radius: var(--size-border-radius);
 }
 
-.navbar__toggle-btn {
+.navbar_toggle-btn {
     position: absolute;
     top: 24px;
     right: 32px;
     font-size: 24px;
-    color: var(--color-white);
+    color: white;
     display: none;
 }
 
@@ -411,4 +422,41 @@ li {
 .contact_links i:hover{
     transform: scale(1.1);
     color: var(--color-deep_yellow);
+}
+
+/* For below 768px screen width; */
+
+@media screen and (max-width:768px){
+    .navbar_toggle-btn{
+        display: block;
+    }
+    #nabar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar_menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .about_majors{
+        flex-direction: column;
+    }
+    .major{
+        margin-bottom: 38px;
+    }
+    .skillset{
+        flex-direction: column;
+    }
+
+    .project{
+        flex-grow: 1;
+    }
+    .testimonial_avatar{
+        width:80px;
+        height: 80px;
+    }
 }
