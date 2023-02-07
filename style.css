@@ -222,6 +222,7 @@ li {
 
 .skill_description{
     margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -341,4 +342,43 @@ li {
     margin: top 8px;
     background-color: var(--color-white);
 
+}
+
+#testimonials{
+    background-color: lightgray;
+}
+.testimonials {
+    margin: 40px;
+    
+}
+
+.testimonial {
+    display: flex;
+    margin: 32px 0;
+}
+
+.testimonial_avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.testimonial_avatar:nth-child(odd){
+    margin-right: 40px;
+}
+.testimonial_avatar:nth-child(even) {
+    margin-left: 40px;
+}
+.testimonial_speech-bubble{
+    padding: 18px;
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.testimonial_speech-bubble p{
+    color: var(--color-grey);
+}
+
+.testimonial_speech-bubble a {
+    color: var(--color-blue);
 }
