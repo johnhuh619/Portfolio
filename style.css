@@ -77,13 +77,19 @@ p {
 }
 /* Navbar */
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex; /*flex box "복잡한 계산 없이 요소의 크기와 순서를 유연하게 배치할 수 있다"*/
     justify-content: space-between; /* 중심축 정렬 */
-    background-color: var(--color-blue);
+    background-color: transparent;
     align-items: center;
     padding:16px;
+    transition: all var(--animation-duration)ease-in-out;
 }
-
+#navbar.navbar--dark{
+    background-color: var(--color-blue);
+    padding: 10px;   
+}
 .navbar_logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
@@ -91,7 +97,7 @@ p {
 }
 
 .img_1{
-    color: var(--color-white);
+    color: white;
     padding: 8px 12px;
 }
 
@@ -128,6 +134,7 @@ p {
 #home {
     background: url('image/home-background2.png') center/cover no-repeat ;  
     padding: 40px;
+    padding-top: 110px;
     text-align: center;
 }
 
@@ -430,7 +437,7 @@ p {
     .navbar_toggle-btn{
         display: block;
     }
-    #nabar{
+    #navbar{
         flex-direction: column;
         align-items: flex-start;
     }
@@ -459,4 +466,4 @@ p {
         width:80px;
         height: 80px;
     }
-}
+} 
