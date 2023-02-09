@@ -139,6 +139,10 @@ p {
     text-align: center;
 }
 
+#home.home--dark{
+
+    padding : 10px;
+}
 .home_avatar {
     width: 250px;
     height: 250px;
