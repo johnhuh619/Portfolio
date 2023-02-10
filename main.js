@@ -44,3 +44,18 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+
+//Show "arrow up" button when srolling down
+const arrowUp = document.querySelector('.arrow_up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+//Handle clic event on "arrowUp" btn
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('#home');
+});

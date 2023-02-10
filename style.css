@@ -370,7 +370,6 @@ p {
     margin: left 12px;
     margin: top 8px;
     background-color: var(--color-white);
-
 }
 /* Testimonial */
 #testimonials{
@@ -441,6 +440,27 @@ p {
     color: var(--color-deep_yellow);
 }
 
+/* Scroll */
+.arrow_up{
+    font-size: 50px;
+    
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: var(--color-blue);
+    padding-top: 8px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+.arrow_up.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
 /* For below 768px screen width; */
 
 @media screen and (max-width:768px){
