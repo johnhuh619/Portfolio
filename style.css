@@ -322,6 +322,10 @@ p {
     justify-content: center;
 }
 
+.project.invisible{
+    display: none;
+}
+
 .project {
     position: relative;
     display: flex;
