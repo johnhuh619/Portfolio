@@ -74,14 +74,25 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
-  projects.forEach((project) => {
-    console.log(project.dataset.type);
-    if (filter === 'all' || filter === project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category_btn.selected');
+  active.classList.remove('selected');
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+
+  projectContainer.classList.add('anime-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === 'all' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anime-out');
+  }, 200);
 });
 
 function scrollIntoView(selector) {
