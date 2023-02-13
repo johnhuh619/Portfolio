@@ -35,11 +35,13 @@
 }
 body {
     margin: 0;
-    cursor: default;
 }
 a {
     text-decoration: none;
     color: var(--color-white);
+}
+ul{
+    padding-left: 0;
 }
 li {
     list-style: none;
@@ -89,7 +91,7 @@ p {
 }
 #navbar.navbar--dark{
     background-color: var(--color-blue);
-    padding: 10px;   
+    padding: 16px;   
 }
 .navbar_logo {
     font-size: var(--font-medium);
@@ -105,6 +107,8 @@ p {
 .navbar_menu{
     display: flex;
 }
+
+
 
 .navbar_menu_item{
     padding: 8px 12px;
@@ -232,20 +236,22 @@ p {
     background-color: #fffcdb;
 }
 .skill{
-    margin-bottom:8px;
+    margin-bottom:32px;
 }
 .skillset{
     display: flex;
     background-color: var(--color-light-grey);
-    color: var(--color-light-white)
+    color: var(--color-light-white);
+    margin: 20px 0;
 }
+
 .skillset_title{
     color: var(--color-white);
 }
 .skillset_left{
     flex-basis: 60%;
     background-color:  var(--color-dark-grey);
-    padding: 40px 40px;
+    padding: 20px 40px;
 }
 
 .skill_description{
@@ -263,7 +269,6 @@ p {
     background-color: var(--color-grey);
 }
 .skill_value{
-    width: 100%;
     height: 3px;
     background-color: var(--color-orange);
 }
@@ -343,7 +348,8 @@ p {
 
 .project_img{
     max-height: 100%;
-    max-height: 100%; 
+    max-height: 100%;
+    align-self: center; 
 }
 
 .project_description{
@@ -366,7 +372,8 @@ p {
     transform: translateY(0px);
 }
 .project_description h3 {
-    color: var(--color-white);
+    color: var(--color-orange);
+    padding-bottom: 8px;
 }
 
 .project_description h3:after{
@@ -374,11 +381,13 @@ p {
     display: block;
     position: relative;
     left: 50%;
-    width: 2px;
-    margin: left 12px;
-    margin: top 8px;
+    width: 50px;
+    height: 2px;
+    transform: translateX(-50%);
+    margin-top: 8px;
     background-color: var(--color-white);
 }
+
 /* Testimonial */
 #testimonials{
     background-color: lightgray;
@@ -478,6 +487,7 @@ p {
     #navbar{
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-blue);
     }
 
     .navbar_menu{
@@ -486,7 +496,9 @@ p {
         width: 100%;
         display: none;
     }
-
+    .navbar_menu.open {
+        display: block;
+    }   
     .about_majors{
         flex-direction: column;
     }

@@ -22,8 +22,14 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-  console.log(event.target.dataset.link);
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+// Handle toggle button for small screeen
+const navbarToggleBtn = document.querySelector('.navbar_toggle-btn');
+navbarToggleBtn.addEventListener('click', (e) => {
+  navbarMenu.classList.toggle('open');
 });
 
 // Handle 'contact me' btn
@@ -55,7 +61,7 @@ document.addEventListener('scroll', () => {
   }
 });
 
-//Handle clic event on "arrowUp" btn
+//Handle click event on "arrowUp" btn
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
