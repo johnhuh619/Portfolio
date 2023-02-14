@@ -158,10 +158,16 @@ p {
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
 }
+
+.home_contact:hover{
+    background-color: var(--color-dark-blue);
+}
+
 .home_title,
 .home_description,
 .home_contact {
     color: var(--color-white);
+    margin: 8px;
 }
 /* Section common */
 
@@ -291,6 +297,7 @@ p {
     border-radius: var(--size-border-radius);
     font-size: var(--font-reqular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category_btn.selected,
@@ -313,9 +320,9 @@ p {
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
 }
@@ -468,11 +475,11 @@ p {
     height: 50px;
     color: white;
     background-color: var(--color-blue);
-    padding-top: 8px;
+    padding-top: 10px;
     border-radius: 50%;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 300ms ease-in;
+    transtoggleition: opacity 300ms ease-in;
 }
 .arrow_up.visible{
     opacity: 1;
@@ -481,8 +488,20 @@ p {
 /* For below 768px screen width; */
 
 @media screen and (max-width:768px){
+    :root{
+        /*Font size  */
+            --font-large: 30px;
+            --font-medium: 18px;
+            --font-reqular: 16px;
+            --font-small: 14px;
+            --font-micro: 12px;
+    }
+    
     .navbar_toggle-btn{
         display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
     }
     #navbar{
         flex-direction: column;
@@ -499,21 +518,57 @@ p {
     .navbar_menu.open {
         display: block;
     }   
+    .section{
+        padding: 16px;
+        padding-top: 40px;
+    }
     .about_majors{
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
     .major{
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
+    
     .skillset{
         flex-direction: column;
     }
-
+    .category_count{
+        right: 10px;
+    }
+    .category_btn {
+        margin: 4px 0;
+        width: 49%;
+    }
     .project{
         flex-grow: 1;
     }
+    .testimonial{
+        flex-direction: column;
+        align-items: center;
+    }
     .testimonial_avatar{
-        width:80px;
-        height: 80px;
+        width:120px;
+        height: 120px;
+        
+    }
+
+    .testimonial_speech-bubble{
+        order:1;
+    }
+    .testimonial_avatar:nth-child(odd),
+    .testimonial_avatar:nth-child(even) {
+        margin : 0;
+        margin-bottom: 20px;
+    }
+    .arrow_up{
+        width: 50px;
+        height: 50px;
+        height: 50px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
+        padding-top: 10px;
     }
 } 
